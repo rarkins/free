@@ -6,3 +6,6 @@ language: node_js
 node_js:
   - "8"
  
+install: true
+
+script: node test.js

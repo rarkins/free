@@ -1,13 +1,15 @@
 const fs = require("fs");
-const parse = require("csv-parse/lib/sync");
 
-const list = fs.readFileSync("list.csv", "utf8");
-const listParsed = parse(list);
-listParsed.shift(); // header row
-
+const list = fs.readFileSync("list.csv", "utf8").split("\n");
+list.shift(); // header
 let seen = [];
-listParsed.forEach(row => {
-  const [username, expiry] = row;
+list.forEach(row => {
+  const splitRow = row.split(",");
+  if (splitRow.length !== 2) {
+    console.error("Invalid number of columns: " + row);
+    process.exit(1);
+  }
+  const [usernanme] = splitRow;
   if (seen.includes(username)) {
     console.error(`Duplicate username: ${username}`);
     process.exit(1);
