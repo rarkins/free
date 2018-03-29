@@ -9,7 +9,7 @@ list.forEach(row => {
     console.error("Invalid number of columns: " + row);
     process.exit(1);
   }
-  const [usernanme] = splitRow;
+  const [username] = splitRow;
   if (seen.includes(username)) {
     console.error(`Duplicate username: ${username}`);
     process.exit(1);
