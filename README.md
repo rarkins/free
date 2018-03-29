@@ -6,6 +6,4 @@ At Renovate we're happy to support students, non-profits, significant open sourc
 
 To request that your account be added, please submit a Pull Request updating `list.csv`.
 
-Rows should be in alphabetical username order (case sensitive) and expiry dates no more than 1 year in advance. Submit a new PR in a year's time to renew.
-
 The "note" in the CSV should be short, please add more description in your PR in case you think justification or explanation is needed.
