@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/renovateapp/free#readme",
   "devDependencies": {
-    "csv-parse": "2.0.4",
-    "luxon": "1.0.0"
+    "csv-parse": "2.0.4"
   }
 }
