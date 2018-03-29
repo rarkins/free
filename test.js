@@ -1,6 +1,9 @@
 const fs = require("fs");
 
-const list = fs.readFileSync("list.csv", "utf8").split("\n");
+const list = fs
+  .readFileSync("list.csv", "utf8")
+  .split("\n")
+  .filter(row => row.length);
 list.shift(); // header
 let seen = [];
 list.forEach(row => {
